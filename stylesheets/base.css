@@ -1,0 +1,32 @@
+:root {
+  --primary-bg-color: #1f2937;
+  --primary-color: #ffffff;
+
+  --hero-font:{
+
+  }
+}
+
+body{
+    font: 24px "Robot";
+    align-items: center;
+    color: #eee7e7;
+    margin: 0;
+}
+
+header{
+     background-color: var(--primary-bg-color);
+     display: flex;
+     justify-content: space-between;
+}
+
+img {
+    width: 10vw;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 30vw;
+}
