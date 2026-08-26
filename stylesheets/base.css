@@ -20,6 +20,10 @@ header{
      justify-content: space-between;
 }
 
+header a {
+    color: white
+}
+
 img {
     width: 10vw;
 }
