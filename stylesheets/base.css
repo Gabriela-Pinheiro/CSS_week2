@@ -1,215 +1,37 @@
 :root {
-  --dark-blue: #1f2937;
-  --white: #f9faf8;
-  --gray: #e5e7eb;
-  --action-blue: #3882f6;
+  --primary-bg-color: #1f2937;
+  --primary-color: #ffffff;
 
-
-  /* hamburger-menu */
-  --bar-width: 60px;
-  --bar-height: 8px;
-  --hamburger-gap: 6px;
-  --hamburger-margin: 8px;
-  --animation-timing: 200ms ease-in-out;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'Robot';
-    src: url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+  --hero-font:{
+    font-size: 48px;
+  }
 }
 
 body{
+    font-family: "Roboto";
+    font-size: 24px;
     align-items: center;
-    background-color: var(--dark-blue);
-    font: 18px 'Robot', sans-serif;
+    color: #eee7e7;
     margin: 0;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-header, footer{
-    background-color: var(--dark-blue);
-    color: var(--gray);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
 }
 
 header{
-    align-items: center;
-    top: 0;
-    z-index: 10;
+     background-color: var(--primary-bg-color);
+     display: flex;
+     justify-content: space-between;
 }
 
-.site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.brand-logo {
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-.site-nav {
-    display: block;
-}
-
-.site-nav ul, ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    justify-content: space-around;
-    gap: 1rem;
-    margin: 2rem;
-}
-
-footer{
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-figure{
-    margin: 0;
+header a {
+    color: white;
 }
 
 img {
-    min-width: 70px;
     width: 10vw;
 }
 
-/* hamburger-menu */
-
-.menu-toggle {
-    display: none;
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 30vw;
 }
-
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    gap: var(--hamburger-gap);
-    width: max-content;
-    position: absolute;
-    top: var(--hamburger-margin);
-    right: var(--hamburger-margin);
-    z-index: 2;
-    cursor: pointer;
-}
-
-/* slices of burger */
-.hamburger-menu span {
-    display: block;
-    background-color: var(--white);
-    border-radius: 999px;
-    height: var(--bar-height);
-    width: var(--bar-width);
-    transition: transform var(--animation-timing), opacity var(--animation-timing), width var(--animation-timing);
-}
-
-/* x behaviour */
-.menu-toggle:checked + .hamburger-menu span:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
-}
-
-.menu-toggle:checked + .hamburger-menu span:nth-child(2) {
-    opacity: 0;
-    width: 0;
-}
-
-.menu-toggle:checked + .hamburger-menu span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
-
-
-/* Product Cards Styling */
-
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
-  background-color: whitesmoke;   
-}
-
-.product-card {
-  flex: 1 1 280px;
-  display: flex;
-  flex-direction: column;
-
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  background: slategray;
-}
-
-.product-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-
-@media screen and (max-width: 375px) {
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .site-nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--dark-blue);
-        padding: 0.5rem 0 1rem;
-    }
-
-    .site-nav ul {
-        flex-direction: column;
-        font-size: 0.8rem;
-        gap: 1rem;
-        margin: 0;
-        padding: 1rem 0;
-    }
-
-    .menu-toggle:checked ~ .site-nav {
-        display: block;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    header, footer {
-        align-items: center;
-    }
-
-    services ul {
-        flex-direction: column;
-    }
-
-}
-
-@media screen and (min-width: 1200px) {
-  
-
-   
-
-  
-}
-
