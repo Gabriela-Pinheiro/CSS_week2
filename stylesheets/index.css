@@ -18,7 +18,7 @@ section{
 
 section ul{
     gap: 2rem;
-    width: fit-content;
+
 }
 
 section:nth-child(odd) {
@@ -31,6 +31,7 @@ section:nth-child(even) {
 
 section.hero {
     background: var(--dark-blue);
+    color: var(--white);
 }
 
 section.hero{
@@ -60,9 +61,10 @@ section.hero{
     /* width: 50%; */
 }
 
-section>a.button{
+.contact>div>a.button{
+    border: 0.1rem solid var(--white);
     border-radius: 0.5rem;
-    border-color: var(--white);
+    margin: 4rem;
 }
 
 .button{
