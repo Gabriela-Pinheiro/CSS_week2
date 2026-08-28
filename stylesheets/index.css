@@ -29,15 +29,40 @@ section:nth-child(even) {
     background: var(--white);
 }
 
+section.hero {
+    background: var(--dark-blue);
+}
+
 section.hero{
     align-items: center;
-    background: var(--dark-blue);
     display: flex;
     justify-content: center;
 }
 
 .hero div{
     text-align: left;
+}
+
+
+/* contact-section */
+
+
+.container-contact{
+    align-items: center;
+    background: var(--action-blue);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container-contact>div{
+    text-align: left;
+    /* width: 50%; */
+}
+
+section>a.button{
+    border-radius: 0.5rem;
+    border-color: var(--white);
 }
 
 .button{
@@ -47,3 +72,4 @@ section.hero{
     color: var(--white);
     padding: 0.5rem 1rem;
 }
+
