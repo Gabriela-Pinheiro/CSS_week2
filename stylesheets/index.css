@@ -30,6 +30,7 @@ section:nth-child(even) {
 section.hero{
     align-items: center;
     background: var(--dark-blue);
+    color: var(--white);
     display: flex;
     justify-content: center;
 }
