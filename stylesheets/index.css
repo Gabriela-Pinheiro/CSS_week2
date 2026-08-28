@@ -5,7 +5,6 @@
 }
 
 object{
-    /* height: fit-content; fix this */
     height: 100%;
     width: 100%;
 }
@@ -18,7 +17,6 @@ section{
 
 section ul{
     gap: 2rem;
-
 }
 
 section:nth-child(odd) {
@@ -45,14 +43,14 @@ section.hero{
 }
 
 
-/* contact-section */
-
+/* Contact section */
 
 .container-contact{
     align-items: center;
     background: var(--action-blue);
     border-radius: 0.5rem;
     display: flex;
+    padding: 1rem;
     justify-content: center;
 }
 
@@ -64,7 +62,7 @@ section.hero{
 .contact>div>a.button{
     border: 0.1rem solid var(--white);
     border-radius: 0.5rem;
-    margin: 4rem;
+    margin: 1rem;
 }
 
 .button{

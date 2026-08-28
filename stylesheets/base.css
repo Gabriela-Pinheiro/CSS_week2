@@ -17,7 +17,6 @@
     box-sizing: border-box;
 }
 
-
 @font-face {
     font-family: 'Robot';
     src: url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
@@ -38,12 +37,39 @@ header, footer{
     display: flex;
     justify-content: space-between;
     position: fixed;
-
     width: 100%;
 }
 
 header{
+    align-items: center;
     top: 0;
+    z-index: 10;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.brand-logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: block;
+}
+
+.site-nav ul, ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 2rem;
 }
 
 footer{
@@ -67,19 +93,14 @@ img {
     width: 10vw;
 }
 
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    justify-content: space-around;
-    gap: 1rem;
-    margin: 2rem;
-}
-
 /* hamburger-menu */
 
-.hamburger-menu{
-    display: flex;
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: max-content;
@@ -87,33 +108,33 @@ ul {
     top: var(--hamburger-margin);
     right: var(--hamburger-margin);
     z-index: 2;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
+/* slices of burger */
+.hamburger-menu span {
+    display: block;
     background-color: var(--white);
     border-radius: 999px;
-    content: "";
     height: var(--bar-height);
-    transition: opacity var(--animation-timing) 
-               width var(--animation-timing);
     width: var(--bar-width);
+    transition: transform var(--animation-timing), opacity var(--animation-timing), width var(--animation-timing);
 }
 
-.hamburger-menu input {
-    appearance: none;
-    margin: 0;
-    outline: none;
-    padding: 0;
-    pointer-events: none;
+/* x behaviour */
+.menu-toggle:checked + .hamburger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
 }
 
-.hamburger-menu input:checked {
+.menu-toggle:checked + .hamburger-menu span:nth-child(2) {
     opacity: 0;
     width: 0;
 }
+
+.menu-toggle:checked + .hamburger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 
 /* Product Cards Styling */
 
@@ -145,6 +166,33 @@ ul {
 }
 
 
+@media screen and (max-width: 375px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-blue);
+        padding: 0.5rem 0 1rem;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        font-size: 0.8rem;
+        gap: 1rem;
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .menu-toggle:checked ~ .site-nav {
+        display: block;
+    }
+}
 
 @media screen and (min-width: 768px) {
     header, footer {
