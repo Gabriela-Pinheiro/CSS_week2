@@ -28,17 +28,35 @@ body{
     background-color: var(--dark-blue);
     font: 18px 'Robot', sans-serif;
     margin: 0;
+    padding: 0.5rem;
+    text-align: center;
 }
 
 header, footer{
     background-color: var(--dark-blue);
+    color: var(--gray);
     display: flex;
-    color: var(--white);
     justify-content: space-between;
+    position: fixed;
+
+    width: 100%;
+}
+
+header{
+    top: 0;
+}
+
+footer{
+    bottom: 0;
 }
 
 a {
     color: var(--white);
+    text-decoration: none;
+}
+
+figure{
+    margin: 0;
 }
 
 img {
@@ -50,7 +68,8 @@ ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
-    width: 30vw;
+    gap: 1rem;
+    margin: 2rem;
 }
 
 /* hamburger-menu */
@@ -98,5 +117,7 @@ ul {
         flex-direction: column;
         align-items: center;
     }
+
+
 }
 

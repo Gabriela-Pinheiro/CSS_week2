@@ -1,14 +1,18 @@
 @import url('base.css');
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 object{
-    height: fit-content; /*fix this*/
-    width: 100%;
+    /* height: fit-content; fix this */
     height: 100%;
+    width: 100%;
 }
 
 section{
-    padding: 2rem;
     height: auto;
+    padding: 2rem;
     width: 100%;
 }
 
@@ -16,7 +20,6 @@ section ul{
     gap: 2rem;
     width: fit-content;
 }
-
 
 section:nth-child(odd) {
     background: var(--gray);
@@ -27,6 +30,20 @@ section:nth-child(even) {
 }
 
 section.hero{
+    align-items: center;
     background: var(--dark-blue);
+    display: flex;
+    justify-content: center;
 }
 
+.hero div{
+    text-align: left;
+}
+
+.button{
+    background-color: var(--action-blue);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+}
