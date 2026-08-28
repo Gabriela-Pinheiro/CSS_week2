@@ -1,30 +1,48 @@
 :root {
-  --primary-bg-color: #1f2937;
-  --primary-color: #ffffff;
+  --dark-blue: #1f2937;
+  --white: #f9faf8;
+  --gray: #e5e7eb;
+  --action-blue: #3882f6;
 
-  --hero-font:{
 
-  }
+  /* hamburger-menu */
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'Robot';
+    src: url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
 }
 
 body{
-    font: 24px "Robot";
     align-items: center;
-    color: #eee7e7;
+    background-color: var(--dark-blue);
+    font: 18px 'Robot', sans-serif;
     margin: 0;
 }
 
-header{
-     background-color: var(--primary-bg-color);
-     display: flex;
-     justify-content: space-between;
+header, footer{
+    background-color: var(--dark-blue);
+    display: flex;
+    color: var(--white);
+    justify-content: space-between;
 }
 
-header a {
-    color: white
+a {
+    color: var(--white);
 }
 
 img {
+    min-width: 70px;
     width: 10vw;
 }
 
@@ -34,3 +52,51 @@ ul {
     justify-content: space-around;
     width: 30vw;
 }
+
+/* hamburger-menu */
+
+.hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    right: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer; 
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    background-color: var(--white);
+    border-radius: 999px;
+    content: "";
+    height: var(--bar-height);
+    transition: opacity var(--animation-timing) 
+               width var(--animation-timing);
+    width: var(--bar-width);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+
+@media screen and (max-width: 820px) {
+    header, footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

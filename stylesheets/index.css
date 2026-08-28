@@ -1,6 +1,32 @@
+@import url('base.css');
+
 object{
+    height: fit-content; /*fix this*/
     width: 100%;
-    
+    height: 100%;
 }
 
+section{
+    padding: 2rem;
+    height: auto;
+    width: 100%;
+}
+
+section ul{
+    gap: 2rem;
+    width: fit-content;
+}
+
+
+section:nth-child(odd) {
+    background: var(--gray);
+}
+
+section:nth-child(even) {
+    background: var(--white);
+}
+
+section.hero{
+    background: var(--dark-blue);
+}
 
