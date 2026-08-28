@@ -72,6 +72,10 @@ ul {
     margin: 2rem;
 }
 
+.cards-container {
+    background-color: white;    
+}
+
 /* hamburger-menu */
 
 .hamburger-menu{
@@ -110,6 +114,35 @@ ul {
     opacity: 0;
     width: 0;
 }
+
+/* Product Cards Styling */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.product-card {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
 
 
 @media screen and (max-width: 820px) {
