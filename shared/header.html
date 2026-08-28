@@ -6,26 +6,39 @@
         <link rel="stylesheet" href="../stylesheets/base.css">
     </head>
     <body>
-        <header>
-            <figure>
-                <img 
-                    src="../assets/logo.svg" 
-                    alt="next written with departuring plane">
+        <header class="site-header">
+            <figure class="brand-logo">
+                <a href="../index.html" target="_blank">
+                    <img 
+                        src="../assets/logo.svg" 
+                        alt="next written with departuring plane">
+                </a>
             </figure>
-            <!-- <label class="hamburger-menu">
-                <input type="checkbox">
-            </label> -->
-            <nav>
+
+            <input 
+                type="checkbox"
+                id="menu-toggle"
+                class="menu-toggle"
+                arial-label="Toggle navigation menu">
+                
+            <label class="hamburger-menu" for="menu-toggle" aria-label="Open navigaion mneu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="site-nav" aria-label="Min navigation">
                 <ul>
                     <li>
-                        <a href="../index.html" target="_blank">Home</a>
+                        <a href="../index.html" 
+                           target="_blank">Home</a>
                     </li>
                     <li>
-                        <a href ="../product.html" target="_blank">Destinations</a>
+                        <a href ="../product.html"          
+                           target="_blank">Destinations</a>
+                    </li>
                     <li>
-                        <a href="../about.html" target="_blank">
-                            About Us
-                        </a>
+                        <a href="#" target="_blank">Join Us</a>
                     </li>
                 </ul>
             </nav>
