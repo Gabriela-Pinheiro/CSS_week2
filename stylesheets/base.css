@@ -48,6 +48,9 @@ header{
 
 footer{
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -70,10 +73,6 @@ ul {
     justify-content: space-around;
     gap: 1rem;
     margin: 2rem;
-}
-
-.cards-container {
-    background-color: white;    
 }
 
 /* hamburger-menu */
@@ -124,6 +123,7 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
+  background-color: whitesmoke;   
 }
 
 .product-card {
@@ -134,7 +134,7 @@ ul {
   border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
-  background: white;
+  background: slategray;
 }
 
 .product-card img {
