@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg" href="assets/plane-icon.svg">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="stylesheets/base.css">
@@ -12,45 +11,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-        <styles>
-            body {
-                background-color: black;
-            }
-        </styles>
 </head>
 <body>
-    <object name="header" type="text/html" data="shared/header.html"></object>
+
+    <!-- HEADER -->
+    <object 
+      name="header" 
+      type="text/html" 
+      data="shared/header.html"
+    >
+    </object>
 
     <main>
-        <h1>About</h1>
-        <div>
-            <h2>AN INDEPENDENT TRAVEL AGENCY 
-                CREATING UNFORGETTABLE JOURNEY 
-                FOR CURIOUS TRAVELERS
-            </h2>
-            <div>
-                <p>
-                    We believe travel is more than visiting new places,
-                    it is about discovering new perspectives, experiencing 
-                    different cultures, and creating memories that stay with you.
-                    At <strong>next</strong>, we design thoughtful journey 
-                    tailored to the way you want to explore the world.
-                </p>
-
-                <P>
-                    From relaxing escapes and cultural adventures to carefully 
-                    planned group trips, our team takes care of the details so you 
-                    can focus on the experience. We combine local knowledge, 
-                    personalized service, and carefully selected destination to make 
-                    every journey feel effortless.
-                </P>
-
-                <button>ABOUT US</button>
+        
+        <!-- ABOUT -->
+        <section>
+            <h1 class="about-title">About</h1>
+            <div class="about-container">
+                    <div class="head">
+                        <h2 class="about-subtitle">
+                            AN INDEPENDENT TRAVEL AGENCY
+                            CREATING UNFORGETTABLE JOURNEYS
+                            FOR CURIOUS TRAVELERS
+                        </h2>
+                        <img src="assets/about-img.png" alt="Next travel agency team planning a journey" class="about-img">
+                    </div>
+                <div class="about-info">
+                    <p>
+                        We believe travel is more than visiting new places,
+                        it is about discovering new perspectives, experiencing
+                        different cultures, and creating memories that stay with you.
+                        At <strong>next</strong>, we design thoughtful journeys
+                        tailored to the way you want to explore the world.
+                    </p>
+            
+                    <P>
+                        From relaxing escapes and cultural adventures to carefully
+                        planned group trips, our team takes care of the details so you
+                        can focus on the experience. We combine local knowledge,
+                        personalized service, and carefully selected destinations to make
+                        every journey feel effortless.
+                    </P>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section>
+            <h1 class="contact-title">Plan Your Destination</h1>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Tell us where you would like to go
+                        and let us help you create a journey
+                        that is made just for you.
+                    </p>
+                    <img src="assets/destination-img.jpg" alt="" class="destination-img">
+                </div>
+            
+                <form class="contact-form">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <label for="email">Enter Address</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" placeholder="Where would you like to go">
+                    <label for="date">Travel Date</label>
+                    <input type="date" id="date" placeholder="Select your preferred travel date">
+                    <label for="number-of-travelers">Number of Travelers</label>
+                    <textarea id="number-of-travelers"
+                        placeholder="Tell us about your travel plans, or anything else we should know."
+                    ></textarea>
+                    <button>PLAN MY JOURNEY</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <object name="footer" type="text/html" data="shared/footer.html"></object>
+    <!-- FOOTER -->
+    <object 
+      name="footer" 
+      type="text/html" 
+      data="shared/footer.html"
+    >
+    </object>
 </body>
 </html>
