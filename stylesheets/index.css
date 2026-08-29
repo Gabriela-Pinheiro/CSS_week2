@@ -45,6 +45,7 @@ section.hero{
 .container-contact{
     align-items: center;
     background: var(--action-blue);
+    color: var(--white);
     border-radius: 0.5rem;
     display: flex;
     padding: 1rem;
