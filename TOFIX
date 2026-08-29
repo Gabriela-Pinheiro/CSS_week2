@@ -1,0 +1,21 @@
+header/footer
+    - fix blanck redirection
+
+general
+    - remove object
+
+index
+    - fix product section with link redirection
+    - add images and text
+    - improve responsiveness
+
+product
+    - add text on top
+    - put the destination with protorype colour intercalatio
+    - intercalate picture and text side by side
+
+about
+    - change alignment so is centrilized
+    - reduce width of text
+    - form to have better placeholders
+    - change font colour for more constast
