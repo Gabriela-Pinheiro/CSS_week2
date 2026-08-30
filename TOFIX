@@ -1,8 +1,8 @@
-header/footer
-    - fix blanck redirection
-
 general
-    - remove object
+    - remove object & fix blanck redirection
+        - index.html DONE
+        - product.html
+        - about.html
 
 index
     - fix product section with link redirection
