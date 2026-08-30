@@ -5,10 +5,10 @@
   --action-blue: #3882f6;
 
   /* hamburger-menu */
-  --bar-width: 60px;
-  --bar-height: 8px;
+  --bar-width: 50px;
+  --bar-height: 6px;
   --hamburger-gap: 6px;
-  --hamburger-margin: 8px;
+  --hamburger-margin: 2REM;
   --animation-timing: 200ms ease-in-out;
 }
 
@@ -35,13 +35,14 @@ header, footer{
     color: var(--gray);
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
 }
 
 header{
     align-items: center;
     top: 0;
+    position: fixed;
     z-index: 10;
 }
 
@@ -80,6 +81,7 @@ footer{
 
 a {
     color: var(--white);
+    font-size: 24px;
     text-decoration: none;
 }
 
@@ -154,17 +156,73 @@ section:nth-child(even) {
     background: var(--white);
 }
 
+/* Index > hero section */
+
 section.hero{
     align-items: center;
     background: var(--dark-blue);
     color: var(--white);
     display: flex;
-    justify-content: center;
-    margin-top: 5vh;
+    justify-content: space-around;
+    margin-top: 9vh;
 }
 
 .hero div{
     text-align: left;
+}
+
+h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+h2{
+    font-size: 36px;
+
+}
+
+/* Index > Services section */
+
+.services-container{
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.services-card {
+    align-items: center;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* article>figure{
+    border: solid;
+    border-radius: 10px;
+    border-color: var(--action-blue);
+    height: 8em;
+    width: 8em;
+} */
+
+.services-card>figure>img{
+    border: solid;
+    border-radius: 10px;
+    border-color: var(--action-blue);
+    height: 10em;
+    width: 10em;
+}
+
+.services-card>p{
+    text-align: center;
+    width: 8em;
+}
+
+.services-card>a {
+    font-size: 15px;
+    color: var(--dark-blue);
+    width: 8em;
 }
 
 /* Index > Contact section */
@@ -176,7 +234,7 @@ section.hero{
     border-radius: 0.5rem;
     display: flex;
     padding: 1rem;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .container-contact>div{
@@ -228,7 +286,7 @@ section.hero{
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
     .hamburger-menu {
         display: flex;
     }
@@ -253,6 +311,15 @@ section.hero{
 
     .menu-toggle:checked ~ .site-nav {
         display: block;
+        transition: var(--animation-timing);
+    }
+
+    .container-contact{
+        flex-direction: column;
+    }
+
+        .container-contact>div{
+        text-align: center;
     }
 }
 
@@ -261,16 +328,19 @@ section.hero{
         align-items: center;
     }
 
-    services ul {
-        flex-direction: column;
-    }
+
 
 }
 
 @media screen and (min-width: 1200px) {
     section.hero{
         margin-top: 10vh;
-}
+    }
+
+    .container-contact{
+        margin: auto;
+        max-width: 70VW;
+    }
     
 }
 
