@@ -4,7 +4,6 @@
   --gray: #e5e7eb;
   --action-blue: #3882f6;
 
-
   /* hamburger-menu */
   --bar-width: 60px;
   --bar-height: 8px;
@@ -135,6 +134,69 @@ img {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/*Index > hero section */
+
+section{
+    height: auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+section ul{
+    gap: 2rem;
+}
+
+section:nth-child(odd) {
+    background: var(--gray);
+}
+
+section:nth-child(even) {
+    background: var(--white);
+}
+
+section.hero{
+    align-items: center;
+    background: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.hero div{
+    text-align: left;
+}
+
+/* Index > Contact section */
+
+.container-contact{
+    align-items: center;
+    background: var(--action-blue);
+    color: var(--white);
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.container-contact>div{
+    text-align: left;
+}
+
+.contact>div>a.button{
+    border: 0.1rem solid var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.button{
+    background-color: var(--action-blue);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+}
+
 
 /* Product Cards Styling */
 
@@ -206,10 +268,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  
-
-   
-
-  
+    section.hero{
+        margin-top: 10vh;
+}
+    
 }
 
