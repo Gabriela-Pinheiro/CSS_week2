@@ -15,12 +15,35 @@
 <body>
 
     <!-- HEADER -->
-    <object 
-      name="header" 
-      type="text/html" 
-      data="shared/header.html"
-    >
-    </object>
+    <header class="site-header">
+        <figure class="brand-logo">
+            <a href="index.html">
+                <img src="assets/logo.svg" alt="next written with departuring plane">
+            </a>
+        </figure>
+    
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" arial-label="Toggle navigation menu">
+    
+        <label class="hamburger-menu" for="menu-toggle" aria-label="Open navigaion mneu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    
+        <nav class="site-nav" aria-label="Min navigation">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="product.html">Destinations</a>
+                </li>
+                <li>
+                    <a href="about.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         
@@ -65,7 +88,7 @@
                         and let us help you create a journey
                         that is made just for you.
                     </p>
-                    <img src="assets/destination-img.jpg" alt="" class="destination-img">
+                    <img src="assets/destination-img.jpg" alt="Travelers exploring" class="destination-img">
                 </div>
             
                 <form class="contact-form">
@@ -73,19 +96,19 @@
                     <input 
                       type="text" 
                       id="name" 
-                      placeholder="Enter your full name"
+                      placeholder="Jane Doe"
                     >
                     <label for="email">Enter Address</label>
                     <input 
                       type="email" 
                       id="email" 
-                      placeholder="Enter your email address"
+                      placeholder="example@gmail.com"
                     >
                     <label for="destination">Destination</label>
                     <input 
                       type="text" 
                       id="destination" 
-                      placeholder="Where would you like to go"
+                      placeholder="Dubai, France, Italy, Brazil..."
                     >
                     <label for="date">Travel Date</label>
                     <input 
@@ -104,11 +127,10 @@
     </main>
 
     <!-- FOOTER -->
-    <object 
-      name="footer" 
-      type="text/html" 
-      data="shared/footer.html"
-    >
-    </object>
+<footer>
+    <p>
+        &copy;next. All rights reserved. 2026.
+    </p>
+</footer>
 </body>
 </html>
